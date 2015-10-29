@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>图片切割</title>
+<style>
+  *{margin:0px;padding:0px}
+
+  #baseDiv{
+    width:104px;
+    height:140px;
+    background:#CCC;
+    text-align:center;
+    margin:auto;
+  }
+  #dragDiv{
+    position:absolute;
+    margin-left:49px;
+    margin-top:49px;
+    width:51px;
+    height:51px;
+    border:1px dotted black;
+    cursor:move;
+    background:none;
+    z-index:99;
+  }
+
+  #clipDiv{
+    position:absolute;
+    clip:rect(50px 100px 100px 50px); //想象成4条线，上、右、下、左
+  }
+</style>
+<script>
+  window.onload=function(){
+    var dragDiv = document.getElementById("dragDiv");
+    var baseDiv = document.getElementById("baseDiv");
+    
+    dragDiv.capture = false;
+
+    dragDiv.onmousedown=function(event){
+      //dragDiv.style.marginTop = "99px";
+      //写在html中可以直接通过上面读取
+      var x = event.clientX;
+      var y = event.clientY;
+
+      //alert(x+","+y);
+      dragDiv.lastPt = {x:x,y:y};
+      dragDiv.capture = true;
+    };
+
+    dragDiv.onmousemove=function(event){
+      if(!dragDiv.capture){
+        return;
+      }
+
+      var x = event.clientX;
+      var y = event.clientY;
+
+
+      var _top = parseInt(window.getComputedStyle(dragDiv).marginTop);
+      var _left = parseInt(window.getComputedStyle(dragDiv).marginLeft);
+
+			var width = parseInt(window.getComputedStyle(dragDiv).width);
+			var height = parseInt(window.getComputedStyle(dragDiv).height);
+			
+			var top = _top + (y-dragDiv.lastPt.y);
+			var left = _left + (x-dragDiv.lastPt.x);
+			var right = left + width;
+			var bottom = top + height;
+			
+			var baseWidth = parseInt(window.getComputedStyle(baseDiv).width);
+			var baseHeight = parseInt(window.getComputedStyle(baseDiv).height);
+			
+			if(top<0||left<0 || right>baseWidth || bottom> baseHeight){
+				return;
+			}
+			
+      dragDiv.style.marginTop = top + 'px';
+      dragDiv.style.marginLeft = left + 'px';
+
+      dragDiv.lastPt = {x:x,y:y};
+			
+      clipDiv.style.clip = "rect("+top + "px " + right +"px "+ bottom + "px "+ left + "px"+")";
+
+      window.status = top + "," + left;
+    };
+    
+    dragDiv.onmouseup = function(){
+      dragDiv.capture = false;
+    }
+  }
+</script>
+</head>
+<body>
+<div id="baseDiv">
+  <div id="dragDiv"></div>
+  <div id="clipDiv">
+    <img src="http://hi.csdn.net/attachment/201201/7/0_13259090008A01.gif" width="104px" height="140px"/>
+  </div>
+</div>
+</body>
+</html>

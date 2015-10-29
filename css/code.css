@@ -1,0 +1,377 @@
+@CHARSET "UTF-8";
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* =End css reset */
+
+
+
+
+body {
+    font-family: "微软雅黑",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+
+img {
+    border: none;
+}
+
+.header {
+    height: 22px;
+    border-bottom: 2px solid #A3110C;
+    background: #fff;
+}
+
+/** #D00202*/
+
+.diy_logo {
+    float: left;
+    width: 220px;
+    height: 20px;
+    background: url(../images/diy_logo.png);
+}
+
+.diy_ul {
+    float: right;
+    margin-right: 10px;
+}
+
+.diy_ul li {
+    float: left;
+    margin: 0 10px;
+    padding: 3px 0;
+    list-style: none;
+}
+
+.diy_ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.diy_ul li a:hover {
+    color: #D00202;
+}
+
+.content {
+    background: #DADBDD;
+}
+
+.diy_bar {
+    float: left;
+    width: 200px;
+}
+
+/*////////////////////////<		nav		>////////////////////////*/
+
+ul#menu {
+    height: 500px;
+}
+
+ul#menu,
+ul#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul#menu a {
+    display: block;
+    text-decoration: none;
+}
+
+ul#menu li {
+    margin-top: 1px;
+}
+
+ul#menu li a {background: url(../images/nva_a_Photo.png);}
+
+ul#menu li a .diy_nav_a {background: url(../images/nva_a_Photo.png);height:30px;width:200px;display:block;line-height:0;font-size:0;}
+ul#menu li a:hover .diy_nav_a {background: url(../images/nva_b_Photo.png); height:30px;width:200px;display:block;}
+ul#menu li a .diy_nav_b{background: url(../images/nva_a_Font.png);height:30px;width:200px;display:block;line-height:0;font-size:0;}
+ul#menu li a:hover .diy_nav_b{background: url(../images/nva_b_Font.png);height:30px; width:200px;display:block;}
+ul#menu li a .diy_nav_c{background: url(../images/nva_a_Backround.png);height:30px; width:200px;display:block;line-height:0;font-size:0;}
+ul#menu li a:hover .diy_nav_c{background: url(../images/nva_b_Backround.png);height:30px; width:200px;display:block;}
+ul#menu li a .diy_nav_d{background: url(../images/nva_a_Decorate.png);height:30px; width:200px;display:block;line-height:0;font-size:0;}
+ul#menu li a:hover .diy_nav_d{background: url(../images/nva_b_Decorate.png);height:30px; width:200px;display:block;}
+ul#menu li a .diy_nav_e{background: url(../images/nva_a_Frame.png);height:30px; width:200px;display:block;line-height:0;font-size:0;}
+ul#menu li a:hover .diy_nav_e{background: url(../images/nva_b_Frame.png);height:30px; width:200px;display:block;}
+
+ul#menu li ul {background:#fbf9f9;} /*控制点击后的高度*/
+
+ul#menu li ul li a {
+    padding-left: 50px;
+    color: #000;
+    background: #E1EBFA;
+}
+
+ul#menu li ul li a:hover {
+    padding-left: 50px;
+    border-left: 5px #4C4C4C solid;
+    background: #DA251C;
+}
+
+.diy_img_abc {
+    height: 100px;
+    padding: 7px;
+    overflow-y: scroll;
+}
+
+/*加载更多图片*/
+
+.diy_img_post img {
+    padding: 0 20%;
+}
+
+/**订制区域导航*/
+
+.diy_container {
+    margin-left: 200px;
+    padding: 5px 20px;
+}
+
+.diy_head {
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+.diy_head_nav {
+    zoom: 1;
+    margin-left: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.diy_head_nav li {
+    float: left;
+    margin: 0 15px 0 15px;
+    list-style: none;
+    line-height: 22px;
+}
+
+.diy_head_nav li a {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.diy_head_nav li a:hover {
+    color: #D00202;
+}
+
+.dragging_img{max-width: 200px; max-height: 200px; z-index: 100;}
+
+.diy_photo img,
+.diy_decorate img{float: left;width: 70px;height: 70px;margin: 4px;padding: 2px;border: 1px solid #DDD;}
+.diy_photo img:hover,
+.diy_decorate img:hover{box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+
+.diy_text img{display: block; margin:10px auto;}
+.diy_text img:hover{box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+
+.diy_background img,
+.diy_frame img{display: block; width: 120px; height: 120px;margin:10px auto; border: 1px solid #CCC;}
+.diy_background img:hover,
+.diy_frame img:hover{box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+
+
+
+/*订制区域*/
+
+.diy_diy {
+    position: relative;
+    width: 552px;
+    height: 366px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background: #fff;
+    overflow: hidden;
+
+        box-shadow:0 0 5px rgba(0,0,0,0.5);
+
+}
+
+.diy_diy_active{outline:2px #F00; outline-style:dotted;}
+.diy_diy_hover{outline:2px #00D525; outline-style:solid;}
+
+.diyPhoto,
+.diyDecorate{position: absolute; z-index: 10;}
+.diyPhoto:hover,
+.diyDecorate:hover{box-shadow:0px 0px 3px #aaa;}
+
+.diyFrame{position: absolute; z-index: 10;}
+.divFrame:hover{box-shadow:0px 0px 3px #aaa;}
+
+.diyFramePhoto{position: absolute; overflow: hidden;}
+.diyFramePhoto img{position: absolute;}
+.divFrameLarger{position: absolute; display: inline-block; text-indent: -999em; cursor: pointer; top:2px; right:39px; width: 35px; height: 35px; background: transparent url("../images/diyFrame_edit.png") 0 -2px no-repeat;}
+.divFrameSmaller{position: absolute; display: inline-block; text-indent: -999em; cursor: pointer; top:2px; right:2px; width: 35px; height: 35px; background: transparent url("../images/diyFrame_edit.png") -38px -2px no-repeat;}
+.divFrameMove{position: absolute; display: inline-block; text-indent: -999em; top:50%; left:50%; margin:-20px 0 0 -20px; width: 39px; height: 39px; background: transparent url("../images/diyFrame_edit.png") -77px 0 no-repeat;}
+
+
+
+.divText{position: absolute; font-size: 20px; z-index: 10; min-width: 12px; min-height: 12px;}
+.divText:hover{text-shadow: 1px 1px 2px #FF751A; box-shadow:0px 0px 3px #aaa;}
+
+.divText_drag{outline:2px #FF751A; outline-style:solid; padding:5px; margin-left:-5px; margin-top:-5px;}
+.divText_edit{outline:2px #4FCA52; outline-style:solid; padding:8px; margin-left:-8px; margin-top:-8px;}
+.divText_drag:hover,
+.divText_edit:hover{text-shadow:none;box-shadow:none;}
+
+.diyBackground{position: absolute; top:0; left:0; z-index: 0;}
+
+
+
+
+
+
+
+.diy_foot {
+    width: 1005px;
+    height: 100px;
+    margin: 10px 10px 0 15px;
+    border: 1px solid #e8e8e8;
+    background: #fff;
+}
+
+
+.ui-draggable{cursor: move;}
+.ui-resizable{position:absolute; border:2px solid #FF751A; margin-left:-2px; margin-top: -2px;}
+.ui-resizable-handle{background-color: #FF751A;}
+
+.ui-resizable-se{width:9px!important; height: 9px!important; background-image: none!important; right:-5px!important;bottom:-5px!important;}
+
+.ui-state-disabled{outline: none; opacity: 1;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 预览外框 */
+.preview_wp{
+    position: relative;
+    margin:50px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    width:552px; height: 366px; overflow: hidden;
+}
+
+.preview_wp .divText:hover,
+.preview_wp .diyPhoto:hover,
+.preview_wp .diyDecorate:hover{text-shadow:none;box-shadow:none;}
+
+
+
+
+
+
+
+
+
+/* =S modul bar */
+
+.modulBar{
+    position: relative;
+    width:80%;
+    margin: 20px auto 0;
+    padding:20px 15px 15px;
+    background-color: #999;
+}
+
+.modulBar_list{
+    width:100%;
+    overflow: hidden;
+}
+
+.modulBar_list li{
+   float: left;
+   margin: 0 5px;
+}
+
+.modulBar_list li img{
+   border:4px solid #aaa;
+   display: inline-block;
+   vertical-align: top;
+}
+
+.modulBar_list li img:hover,
+.modulBar_list li img#modulOn{
+   border-color: #FF751A;
+}
+
+
+/* =E modul bar */
+
+
+
+
+
+
+
+
+/* =S rotate handle */
+
+#rotateHandle{
+    position: absolute;
+    top:-30px; left:50%;
+    width: 10px; height: 10px; background-color: #F00;
+    margin-left: -5px;
+}
